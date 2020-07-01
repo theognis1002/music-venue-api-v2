@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import JsonResponse
 from rest_framework import views
 from rest_framework.response import Response
 from .models import Venue
@@ -17,3 +18,11 @@ class VenueView(views.APIView):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors)
+
+
+def test_route(request):
+    data = {
+        "results": 1234,
+        "query": "test query"
+    }
+    return JsonResponse(data)
