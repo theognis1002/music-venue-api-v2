@@ -3,6 +3,7 @@ from django.db import models
 
 # Create your models here.
 class Venue(models.Model):
+    id = models.IntegerField(primary_key=True)
     venue = models.CharField(max_length=255)
     capacity = models.IntegerField()
     city = models.CharField(max_length=50)
