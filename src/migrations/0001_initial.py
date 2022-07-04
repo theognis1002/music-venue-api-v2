@@ -7,18 +7,25 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Venues',
+            name="Venues",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('venue', models.CharField(max_length=255)),
-                ('capacity', models.IntegerField(max_length=255)),
-                ('city', models.CharField(max_length=50)),
-                ('state', models.CharField(max_length=10)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("venue", models.CharField(max_length=255)),
+                ("capacity", models.IntegerField(max_length=255)),
+                ("city", models.CharField(max_length=50)),
+                ("state", models.CharField(max_length=10)),
             ],
         ),
     ]
